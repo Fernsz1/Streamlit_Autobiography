@@ -121,20 +121,6 @@ if page == "About Me":
         """
     )
 
-    st.subheader("🎯 Skills")
-    skills = {
-        "Java": 50,
-        "Python": 50,
-        "Kotlin": 30,
-        "PHP": 25,
-        "HTML/CSS": 55,
-        "Game Dev (Godot/Unity)": 80,
-    }
-
-    for skill, percent in skills.items():
-        st.write(f"**{skill}**")
-        st.progress(percent)
-
     st.subheader("💻 Technical Skills & Expertise")
     st.write(
         """
@@ -263,9 +249,19 @@ elif page == "Portfolio":
     for project in projects:
         colA, colB = st.columns(2)
             # Images
-        colA.image(project["images"][0])
-        colB.image(project["images"][1])
+        # DISPLAY PROJECTS
+    for project in projects:
+        colA, colB = st.columns(2)
+            
+        # --- THIS WILL AUTOMATICALLY SCALE THE IMAGES ---
+        colA.image(project["images"][0], use_column_width='always')
+        colB.image(project["images"][1], use_column_width='always')
+        # ------------------------------------------------
 
+        # Description placeholder
+        st.write("###  " + project["name"])
+        st.write(project["description"])
+        st.markdown("---")
             # Description placeholder
         st.write("###  " + project["name"])
         st.write(project["description"])
