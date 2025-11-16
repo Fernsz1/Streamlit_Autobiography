@@ -72,6 +72,10 @@ page = st.sidebar.radio("Go to:", ["About Me", "Portfolio", "Contact"])
 # ---------------------------------------------
 # ABOUT ME
 # ---------------------------------------------
+
+# ---------------------------------------------
+# ABOUT ME
+# ---------------------------------------------
 if page == "About Me":
     st.title("👤 About Me")
     st.header("📘 Autobiography")
@@ -93,7 +97,9 @@ if page == "About Me":
             """
         )
 
-    st.subheader("My Analytical Impact")
+    st.markdown("---")
+
+    st.subheader("📈 My Analytical Impact")
 
     col1, col2, col3 = st.columns(3)
 
@@ -111,87 +117,84 @@ if page == "About Me":
 
     st.markdown("---")
 
-    st.subheader("Educational Background")
+    st.subheader("🎓 Educational Background")
 
     st.markdown(
         """
-        - **B.S. in Computer Science (BSCS)**, Cebu Institute of Technology – University (2023 – Present)  
-        - **Secondary Education**, University of Cebu – Main Campus (2021 – 2023) 
-        - **Primary Education**, Don Vicente Rama Memorial Elementary School (2013 – 2021) 
+        - **B.S. in Computer Science (BSCS)**, Cebu Institute of Technology – University (2023 – Present) 
+        - **Secondary Education**, University of Cebu – Main Campus (2021 – 2023)
+        - **Primary Education**, Don Vicente Rama Memorial Elementary School (2013 – 2021)
         """
     )
 
+    st.markdown("---")
+    
     st.subheader("💻 Technical Skills & Expertise")
     st.write(
         """
-    A comprehensive overview of my technical competencies across programming languages, frameworks, development tools,
-    and foundational computer science concepts. These reflect both academic experience and hands-on project development.
-    """
-    )
-
-    # ---------------------------------
-    # 1. Core Programming Languages
-    # ---------------------------------
-    st.markdown("### 🔹 1. Core Programming Languages")
-
-    langs = {
-        "Python (Intermediate–Advanced)": 75,
-        "Java / Kotlin (Advanced OOP & Mobile)": 85,
-        "C++ (Intermediate Data Structures)": 65,
-        "C (Low-Level Systems Programming)": 60,
-        "JavaScript (Basic Web Development)": 40,
-        "SQL (Database Querying & Optimization)": 70,
-    }
-
-    for l, p in langs.items():
-        st.write(f"**{l}**")
-        st.progress(p)
-
-    # ---------------------------------
-    # 2. Frameworks, Libraries, & Tools
-    # ---------------------------------
-    st.markdown("### 🔹 2. Frameworks, Libraries, & Tools")
-
-    st.write("#### 📱 Mobile & Game Development")
-    st.markdown(
+        A comprehensive overview of my technical competencies. These reflect both academic experience and 
+        hands-on project development, all organized by category.
         """
-    - **Android SDK / Studio**  
-    - **Unity (Basic 2D Development)**  
-    - **JavaFX (Desktop UI Development)**  
-    """
     )
 
-    st.write("#### 🌐 Data & Web Development")
-    st.markdown(
-        """
-    - **Streamlit (Interactive Web Dashboards)**  
-    - **Pandas / NumPy (Data Manipulation & Analysis)**  
-    - **Matplotlib / Seaborn (Data Visualization)**  
-    """
-    )
+    # --- REORGANIZED SKILLS INTO TABS ---
+    tab1, tab2, tab3 = st.tabs(["🔹 Core Languages", "🛠️ Frameworks & Tools", "💡 Core Concepts"])
 
-    st.write("#### 🔧 Version Control / DevOps")
-    st.markdown(
-        """
-    - **Git / GitHub (Proficient in Branching, PRs, Collaboration)**  
-    - **Docker (Basic Containerization & Environments)**  
-    - **JIRA / Agile (Team Workflow & Task Management)**  
-    """
-    )
+    with tab1:
+        st.write("My proficiency in core programming languages, from low-level systems to high-level scripting.")
+        langs = {
+            "Python (Intermediate–Advanced)": 75,
+            "Java / Kotlin (Advanced OOP & Mobile)": 85,
+            "C++ (Intermediate Data Structures)": 65,
+            "C (Low-Level Systems Programming)": 60,
+            "JavaScript (Basic Web Development)": 40,
+            "SQL (Database Querying & Optimization)": 70,
+        }
 
-    # ---------------------------------
-    # 3. Core Development Concepts
-    # ---------------------------------
-    st.markdown("### 🔹 3. Core Development Concepts")
+        for l, p in langs.items():
+            st.write(f"**{l}**")
+            st.progress(p)
 
-    st.markdown(
-        """
-    **Object-Oriented Programming (OOP):** Strong command of abstraction, modular design, and clean architecture.  
-    **Data Structures & Algorithms (DSA):** Solid understanding of lists, trees, graphs, hashing, and time complexity.  
-    **Database Management:** Experience with SQL (MySQL) and basic NoSQL concepts (Firebase/MongoDB).  
-    **Debugging & Testing:** Skilled in systematic debugging, error tracing, and writing unit tests for code reliability.  
-    """
-    )
+    with tab2:
+        st.write("The ecosystem of tools, libraries, and frameworks I use to build and deploy applications.")
+        
+        st.write("#### 📱 Mobile & Game Development")
+        st.markdown(
+            """
+            - **Android SDK / Studio**
+            - **Unity (Basic 2D Development)**
+            - **JavaFX (Desktop UI Development)**
+            """
+        )
+
+        st.write("#### 🌐 Data & Web Development")
+        st.markdown(
+            """
+            - **Streamlit (Interactive Web Dashboards)**
+            - **Pandas / NumPy (Data Manipulation & Analysis)**
+            - **Matplotlib / Seaborn (Data Visualization)**
+            """
+        )
+
+        st.write("#### 🔧 Version Control / DevOps")
+        st.markdown(
+            """
+            - **Git / GitHub (Proficient in Branching, PRs, Collaboration)**
+            - **Docker (Basic Containerization & Environments)**
+            - **JIRA / Agile (Team Workflow & Task Management)**
+            """
+        )
+
+    with tab3:
+        st.write("The fundamental computer science principles that guide my development practices.")
+        st.markdown(
+            """
+            - **Object-Oriented Programming (OOP):** Strong command of abstraction, modular design, and clean architecture.
+            - **Data Structures & Algorithms (DSA):** Solid understanding of lists, trees, graphs, hashing, and time complexity.
+            - **Database Management:** Experience with SQL (MySQL) and basic NoSQL concepts (Firebase/MongoDB).
+            - **Debugging & Testing:** Skilled in systematic debugging, error tracing, and writing unit tests for code reliability.
+            """
+        )
 
 
 # ---------------------------------------------
@@ -222,8 +225,8 @@ elif page == "Portfolio":
         {
             "name": "MatchIt Mania!",
             "images": [
-                "https://i.imgur.com/LDmL3je.jpeg",
-                "https://i.imgur.com/YTijnY9.jpeg",
+                "https://i.imgur.com/9S6AWNb.jpeg",
+                "https://i.imgur.com/MI84xWb.jpeg",
             ],
             "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
         },
@@ -261,10 +264,7 @@ elif page == "Portfolio":
         st.write(project["description"])
         st.markdown("---")
 
-    st.markdown("### 📄 My Resume")
-    st.markdown(
-        "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
-    )
+
 
 
 # ---------------------------------------------
