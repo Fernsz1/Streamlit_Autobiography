@@ -71,9 +71,6 @@ page = st.sidebar.radio("Go to:", ["About Me", "Portfolio", "Contact"])
 # ---------------------------------------------
 if page == "About Me":
     st.title("👤 About Me")
-
-    st.image("https://i.imgur.com/oS4rwXF.jpeg", width=250)
-
     st.header("📘 Autobiography")
 
     with st.expander("Read my story"):
@@ -140,55 +137,62 @@ if page == "About Me":
 # ---------------------------------------------
 elif page == "Portfolio":
     st.title("💼 My Portfolio")
+    st.subheader("🚀 Projects")
 
-    tabs = st.tabs(["Projects", "Gallery"])
+    # PROJECT LIST
+    projects = [
+        {
+            "name": "CookingIna! Ang Sarap!",
+            "images": [
+                "https://i.imgur.com/ihpMuPz.jpeg",
+                "https://i.imgur.com/z1JBoZf.jpeg",
+            ],
+            "description": "2D Cooking Simulation Game developed using FXGL. Players can experience cooking various dishes while managing time and resources.",
+        },
+        {
+            "name": "BALIKAW",
+            "images": [
+                "https://i.imgur.com/z2x1jFq.jpeg",
+                "https://i.imgur.com/ntxkaPG.png",
+            ],
+            "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story. Play it here --> https://sahoooo.itch.io/balikaw",
+        },
+        {
+            "name": "MatchIt Mania!",
+            "images": [
+                "https://i.imgur.com/LDmL3je.jpeg",
+                "https://i.imgur.com/YTijnY9.jpeg",
+            ],
+            "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
+        },
+        {
+            "name": "EXPy",
+            "images": [
+                "https://i.imgur.com/Ypk95tg.jpeg",
+                "https://i.imgur.com/f8OarSh.jpeg",
+            ],
+            "description": "A python solo learining application that helps users learn Python programming through interactive lessons and quizzes."
+        },
+        {
+            "name": "Jubuddy",
+            "images": [
+                "https://i.imgur.com/K7TwAK7.jpeg",
+                "https://i.imgur.com/aWslnFZ.jpeg",
+            ],
+            "description": "Smart budget planner app that helps users track expenses, set savings goals, and manage finances effectively."
+        }
+    ]
 
-    # -----------------------------------------
-    # PROJECTS TAB
-    # -----------------------------------------
-    with tabs[0]:
-        st.subheader("🚀 Projects")
+    # DISPLAY PROJECTS
+    for project in projects:
+        colA, colB = st.columns(2)
+            # Images
+        colA.image(project["images"][0])
+        colB.image(project["images"][1])
 
-        # PROJECT LIST
-        projects = [
-            {
-                "name": "CookingIna! Ang Sarap!",
-                "images": [
-                    "https://i.imgur.com/ihpMuPz.jpeg",
-                    "https://i.imgur.com/z1JBoZf.jpeg",
-                ],
-                "description": "2D Cooking Simulation Game developed using FXGL. Players can experience cooking various dishes while managing time and resources.",
-            },
-            {
-                "name": "BALIKAW",
-                "images": [
-                    "https://i.imgur.com/z2x1jFq.jpeg",
-                    "https://i.imgur.com/ntxkaPG.png",
-                ],
-                "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story.",
-            },
-            {
-                "name": "MatchIt Mania!",
-                "images": [
-                    "https://i.imgur.com/LDmL3je.jpeg",
-                    "https://i.imgur.com/YTijnY9.jpeg",
-                ],
-                "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
-            }
-        ]
-
-        # DISPLAY PROJECTS
-        for project in projects:
-            colA, colB = st.columns(2)
-                # Images
-            colA.image(project["images"][0])
-            colB.image(project["images"][1])
-
-                # Description placeholder
-            st.write("###  " + project["name"])
-            st.write(project["description"])
-            st.markdown("---")
-
+            # Description placeholder
+        st.write("###  " + project["name"])
+        st.write(project["description"])
         st.markdown("---")
 
         st.markdown("### 📄 My Resume")
