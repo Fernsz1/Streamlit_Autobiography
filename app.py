@@ -7,6 +7,9 @@ from datetime import datetime
 # ---------------------------------------------
 
 # Sidebar Profile
+
+st.set_page_config(layout="wide")
+
 st.sidebar.markdown(
     """
     <style>
@@ -268,10 +271,10 @@ elif page == "Portfolio":
         st.write(project["description"])
         st.markdown("---")
 
-        st.markdown("### 📄 My Resume")
-        st.markdown(
-            "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
-        )
+    st.markdown("### 📄 My Resume")
+    st.markdown(
+        "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
+    )
 
 
 # ---------------------------------------------
