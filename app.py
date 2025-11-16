@@ -109,8 +109,8 @@ elif page == "Portfolio":
             {
                 "name": "BALIKAW",
                 "images": [
-                    "https://imgur.com/a/qdBnYXo",
-                    "https://imgur.com/a/vCD49Ys",
+                    "<blockquote class="imgur-embed-pub" lang="en" data-id="a/qdBnYXo" data-context="false" ><a href="//imgur.com/a/qdBnYXo"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>",
+                    "<blockquote class="imgur-embed-pub" lang="en" data-id="a/vCD49Ys" data-context="false" ><a href="//imgur.com/a/vCD49Ys"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>",
                 ],
                 "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story.",
             },
@@ -142,6 +142,67 @@ elif page == "Portfolio":
         st.markdown("### 📄 My Resume")
         st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
 )
+
+# -----------------------------------------
+# GALLERY TAB
+# -----------------------------------------
+with tabs[1]:
+    st.subheader("🖼 Gallery")
+
+    st.markdown("### 📄 My CV")
+    st.markdown(
+        "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
+    )
+
+    st.markdown("---")
+    st.markdown("### 📚 Project Images")
+
+    # PROJECT IMAGES (2 each)
+    gallery_projects = [
+        {
+            "name": "CookingIna! Ang Sarap!",
+            "images": [
+                "https://via.placeholder.com/500x300?text=CookingIna+Image+1",
+                "https://via.placeholder.com/500x300?text=CookingIna+Image+2",
+            ]
+        },
+        {
+            "name": "BALIKAW",
+            "images": [
+                "https://via.placeholder.com/500x300?text=BALIKAW+Image+1",
+                "https://via.placeholder.com/500x300?text=BALIKAW+Image+2",
+            ]
+        },
+        {
+            "name": "EXPy",
+            "images": [
+                "https://via.placeholder.com/500x300?text=EXPy+Image+1",
+                "https://via.placeholder.com/500x300?text=EXPy+Image+2",
+            ]
+        },
+        {
+            "name": "Jubuddy",
+            "images": [
+                "https://via.placeholder.com/500x300?text=Jubuddy+Image+1",
+                "https://via.placeholder.com/500x300?text=Jubuddy+Image+2",
+            ]
+        },
+        {
+            "name": "MatchIt Mania!",
+            "images": [
+                "https://via.placeholder.com/500x300?text=MatchIt+Mania+Image+1",
+                "https://via.placeholder.com/500x300?text=MatchIt+Mania+Image+2",
+            ]
+        }
+    ]
+
+    # DISPLAY IMAGES
+    for proj in gallery_projects:
+        st.markdown(f"#### {proj['name']}")
+        col1, col2 = st.columns(2)
+        col1.image(proj["images"][0])
+        col2.image(proj["images"][1])
+        st.markdown("---")
 
 
 # ---------------------------------------------
