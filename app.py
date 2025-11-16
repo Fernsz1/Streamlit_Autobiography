@@ -256,7 +256,8 @@ elif page == "Portfolio":
         # ------------------------------------------------
 
         # Description placeholder
-        ject["name"])
+       
+        st.write("###  " + project["name"])
         st.write(project["description"])
         st.markdown("---")
 
