@@ -109,16 +109,16 @@ elif page == "Portfolio":
             {
                 "name": "BALIKAW",
                 "images": [
-                    "<blockquote class="imgur-embed-pub" lang="en" data-id="a/qdBnYXo" data-context="false" ><a href="//imgur.com/a/qdBnYXo"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>",
-                    "<blockquote class="imgur-embed-pub" lang="en" data-id="a/vCD49Ys" data-context="false" ><a href="//imgur.com/a/vCD49Ys"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>",
+                    "https://imgur.com/a/qdBnYXo",
+                    "https://imgur.com/a/vCD49Ys",
                 ],
                 "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story.",
             },
             {
                 "name": "MatchIt Mania!",
                 "images": [
-                    "https://imgur.com/a/i7dYrPZ",
-                    "https://imgur.com/a/M2fyi54",
+                    "https://i.imgur.com/LDmL3je.jpeg",
+                    "https://i.imgur.com/YTijnY9.jpeg",
                 ],
                 "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
             }
