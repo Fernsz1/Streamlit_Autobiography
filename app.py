@@ -196,6 +196,7 @@ if page == "About Me":
             """
         )
 
+    st.markdown("---")
     st.markdown("### 📄 My Resume")
 
     # --- ADDED INTRODUCTORY TEXT HERE ---
@@ -276,9 +277,6 @@ elif page == "Portfolio":
         st.write(project["description"])
         st.markdown("---")
 
-
-
-
 # ---------------------------------------------
 # CONTACT
 # ---------------------------------------------
@@ -297,8 +295,17 @@ elif page == "Contact":
         else:
             st.error("Please fill out all fields and agree to submit.")
 
+    st.markdown("---")
+
     st.subheader("🌍 Socials")
+    
+    st.write(
+        "Feel free to check out my profiles and connect with me on other platforms:"
+    )
+
     col1, col2, col3 = st.columns(3)
-    col1.markdown("[GitHub](https://github.com/Fernsz1)")
-    col2.markdown("[LinkedIn](https://www.linkedin.com/in/christian-luis-fernandez-051699383/)")
-    col3.markdown("[Facebook](https://www.facebook.com/christianluis.fernandez/)")
+    
+    # --- ADDED EMOJIS TO YOUR LINKS ---
+    col1.markdown("[GitHub 🐙](https://github.com/Fernsz1)")
+    col2.markdown("[LinkedIn 💼](https://www.linkedin.com/in/christian-luis-fernandez-051699383/)")
+    col3.markdown("[Facebook 📘](https://www.facebook.com/christianluis.fernandez/)")
