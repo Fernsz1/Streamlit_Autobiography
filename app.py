@@ -7,44 +7,53 @@ from datetime import datetime
 # ---------------------------------------------
 
 # Sidebar Profile
-# ---------------------------------------------
-# BEAUTIFUL SIDEBAR WITH ROUNDED PROFILE PHOTO
-# ---------------------------------------------
-
-# Sidebar CSS
 st.sidebar.markdown(
     """
     <style>
+        /* Fix sidebar width so it cannot be resized */
+        [data-testid="stSidebar"] {
+            min-width: 300px;
+            max-width: 300px;
+        }
+
+        /* Center alignment for sidebar */
         .sidebar .sidebar-content {
             text-align: center;
         }
+
+        /* Bigger rounded profile picture */
         .profile-pic {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 150px;
-            height: 150px;
+            width: 200px;     /* bigger size */
+            height: 200px;    /* bigger size */
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #4CAF50;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            border: 4px solid #4CAF50;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.35);
+            margin-top: 15px;
         }
+
         .sidebar-name {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 12px;
+            text-align: center;
         }
+
         .sidebar-role {
-            font-size: 13px;
-            color: #ccc;
-            margin-bottom: 20px;
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 25px;
+            text-align: center;
         }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Rounded and centered profile image
+# Sidebar Profile Section
 st.sidebar.markdown(
     f"""
     <img src="https://i.imgur.com/oS4rwXF.jpeg" class="profile-pic">
@@ -57,7 +66,6 @@ st.sidebar.markdown(
 # Navigation
 st.sidebar.title("📌 Navigation")
 page = st.sidebar.radio("Go to:", ["About Me", "Portfolio", "Contact"])
-
 # ---------------------------------------------
 # ABOUT ME
 # ---------------------------------------------
