@@ -5,13 +5,58 @@ from datetime import datetime
 # ---------------------------------------------
 # Sidebar Navigation
 # ---------------------------------------------
-st.sidebar.title("📌 Navigation")
-page = st.sidebar.radio("Go to:", [ "About Me", "Portfolio", "Contact"])
 
 # Sidebar Profile
-st.sidebar.image("https://i.imgur.com/oS4rwXF.jpeg", width=150)
-st.sidebar.write("Christian Luis C. Fernandez")
-st.sidebar.write("Game Developer • Designer • Prompt Engineer • Data Analyst")
+# ---------------------------------------------
+# BEAUTIFUL SIDEBAR WITH ROUNDED PROFILE PHOTO
+# ---------------------------------------------
+
+# Sidebar CSS
+st.sidebar.markdown(
+    """
+    <style>
+        .sidebar .sidebar-content {
+            text-align: center;
+        }
+        .profile-pic {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4CAF50;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        }
+        .sidebar-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .sidebar-role {
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Rounded and centered profile image
+st.sidebar.markdown(
+    f"""
+    <img src="https://i.imgur.com/oS4rwXF.jpeg" class="profile-pic">
+    <div class="sidebar-name">Christian Luis C. Fernandez</div>
+    <div class="sidebar-role">Game Developer • Designer • Prompt Engineer • Data Analyst</div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Navigation
+st.sidebar.title("📌 Navigation")
+page = st.sidebar.radio("Go to:", ["About Me", "Portfolio", "Contact"])
 
 # ---------------------------------------------
 # ABOUT ME
@@ -132,8 +177,9 @@ elif page == "Portfolio":
             colB.image(project["images"][1])
 
                 # Description placeholder
-            st.write("### 📝 Description")
+            st.write("###  " + project["name"])
             st.write(project["description"])
+            st.markdown("---")
 
         st.markdown("---")
 
@@ -141,14 +187,6 @@ elif page == "Portfolio":
         st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
 )
 
-
-        # DISPLAY IMAGES
-        for proj in gallery_projects:
-            st.markdown(f"#### {proj['name']}")
-            col1, col2 = st.columns(2)
-            col1.image(proj["images"][0])
-            col2.image(proj["images"][1])
-            st.markdown("---")
 
 # ---------------------------------------------
 # CONTACT
