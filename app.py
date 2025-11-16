@@ -9,7 +9,7 @@ st.sidebar.title("📌 Navigation")
 page = st.sidebar.radio("Go to:", [ "About Me", "Portfolio", "Contact"])
 
 # Sidebar Profile
-st.sidebar.image("https://imgur.com/a/IVEHzVq", width=150)
+st.sidebar.image("https://i.imgur.com/oS4rwXF.jpeg", width=150)
 st.sidebar.write("Christian Luis C. Fernandez")
 st.sidebar.write("Game Developer • Designer • Prompt Engineer • Data Analyst")
 
@@ -19,7 +19,7 @@ st.sidebar.write("Game Developer • Designer • Prompt Engineer • Data Analy
 if page == "About Me":
     st.title("👤 About Me")
 
-    st.image("https://imgur.com/a/IVEHzVq", width=250)
+    st.image("https://i.imgur.com/oS4rwXF.jpeg", width=250)
 
     st.header("📘 Autobiography")
 
@@ -101,16 +101,16 @@ elif page == "Portfolio":
             {
                 "name": "CookingIna! Ang Sarap!",
                 "images": [
-                    "https://imgur.com/a/qvecSTS",
-                    "https://imgur.com/a/ba29rbA",
+                    "https://i.imgur.com/ihpMuPz.jpeg",
+                    "https://i.imgur.com/z1JBoZf.jpeg",
                 ],
                 "description": "2D Cooking Simulation Game developed using FXGL. Players can experience cooking various dishes while managing time and resources.",
             },
             {
                 "name": "BALIKAW",
                 "images": [
-                    "https://imgur.com/a/qdBnYXo",
-                    "https://imgur.com/a/vCD49Ys",
+                    "https://i.imgur.com/z2x1jFq.jpeg",
+                    "https://i.imgur.com/ntxkaPG.png",
                 ],
                 "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story.",
             },
@@ -126,16 +126,14 @@ elif page == "Portfolio":
 
         # DISPLAY PROJECTS
         for project in projects:
-            with st.expander(f"📌 {project['name']}"):
-                colA, colB = st.columns(2)
-
+            colA, colB = st.columns(2)
                 # Images
-                colA.image(project["images"][0])
-                colB.image(project["images"][1])
+            colA.image(project["images"][0])
+            colB.image(project["images"][1])
 
                 # Description placeholder
-                st.write("### 📝 Description")
-                st.write(project["description"])
+            st.write("### 📝 Description")
+            st.write(project["description"])
 
         st.markdown("---")
 
@@ -143,59 +141,6 @@ elif page == "Portfolio":
         st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
 )
 
-    # -----------------------------------------
-    # GALLERY TAB
-    # -----------------------------------------
-    with tabs[1]:
-        st.subheader("🖼 Gallery")
-
-        st.markdown("### 📄 My CV")
-        st.markdown(
-            "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
-        )
-
-
-        st.markdown("---")
-        st.markdown("### 📚 Project Images")
-
-        # PROJECT IMAGES (2 each)
-        gallery_projects = [
-            {
-                "name": "CookingIna! Ang Sarap!",
-                "images": [
-                    "https://via.placeholder.com/500x300?text=CookingIna+Image+1",
-                    "https://via.placeholder.com/500x300?text=CookingIna+Image+2",
-                ]
-            },
-            {
-                "name": "BALIKAW",
-                "images": [
-                    "https://via.placeholder.com/500x300?text=BALIKAW+Image+1",
-                    "https://via.placeholder.com/500x300?text=BALIKAW+Image+2",
-                ]
-            },
-            {
-                "name": "EXPy",
-                "images": [
-                    "https://via.placeholder.com/500x300?text=EXPy+Image+1",
-                    "https://via.placeholder.com/500x300?text=EXPy+Image+2",
-                ]
-            },
-            {
-                "name": "Jubuddy",
-                "images": [
-                    "https://via.placeholder.com/500x300?text=Jubuddy+Image+1",
-                    "https://via.placeholder.com/500x300?text=Jubuddy+Image+2",
-                ]
-            },
-            {
-                "name": "MatchIt Mania!",
-                "images": [
-                    "https://via.placeholder.com/500x300?text=MatchIt+Mania+Image+1",
-                    "https://via.placeholder.com/500x300?text=MatchIt+Mania+Image+2",
-                ]
-            }
-        ]
 
         # DISPLAY IMAGES
         for proj in gallery_projects:
