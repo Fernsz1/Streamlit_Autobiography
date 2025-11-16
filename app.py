@@ -150,9 +150,8 @@ with tabs[1]:
     st.subheader("🖼 Gallery")
 
     st.markdown("### 📄 My CV")
-    st.markdown(
-        "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
-    )
+    st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)")
+
 
     st.markdown("---")
     st.markdown("### 📚 Project Images")
