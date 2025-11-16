@@ -244,8 +244,8 @@ elif page == "Portfolio":
         {
             "name": "MatchIt Mania!",
             "images": [
-                "https://i.imgur.com/LDmL3je.jpeg",
-                "https://i.imgur.com/YTijnY9.jpeg",
+                "https://i.imgur.com/9S6AWNb.jpeg",
+                "https://i.imgur.com/MI84xWb.jpeg",
             ],
             "description": "A vibrant and addictive match-3 puzzle game designed for mobile. "
                            "Players swap adjacent tiles to create matches, unleashing powerful boosters "
