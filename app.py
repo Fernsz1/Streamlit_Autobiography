@@ -246,10 +246,7 @@ elif page == "Portfolio":
     ]
 
     # DISPLAY PROJECTS
-    for project in projects:
-        colA, colB = st.columns(2)
-            # Images
-        # DISPLAY PROJECTS
+    # DISPLAY PROJECTS
     for project in projects:
         colA, colB = st.columns(2)
             
@@ -259,11 +256,7 @@ elif page == "Portfolio":
         # ------------------------------------------------
 
         # Description placeholder
-        st.write("###  " + project["name"])
-        st.write(project["description"])
-        st.markdown("---")
-            # Description placeholder
-        st.write("###  " + project["name"])
+        ject["name"])
         st.write(project["description"])
         st.markdown("---")
 
