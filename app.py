@@ -162,7 +162,7 @@ if page == "About Me":
         st.markdown(
             """
             - **Android SDK / Studio**
-            - **Unity (Basic 2D Development)**
+            - **Godot (Basic 3D Development)**
             - **JavaFX (Desktop UI Development)**
             """
         )
@@ -196,6 +196,18 @@ if page == "About Me":
             """
         )
 
+    st.markdown("### 📄 My Resume")
+
+    # --- ADDED INTRODUCTORY TEXT HERE ---
+    st.write(
+        "For a more detailed breakdown of my qualifications, academic background, and professional experience, "
+        "please feel free to view my full CV."
+    )
+    # ----------------------------------------
+    
+    st.markdown(
+        "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
+    )
 
 # ---------------------------------------------
 # PORTFOLIO
