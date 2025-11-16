@@ -6,58 +6,75 @@ from datetime import datetime
 # Sidebar Navigation
 # ---------------------------------------------
 st.sidebar.title("📌 Navigation")
-page = st.sidebar.radio("Go to:", ["Home", "About Me", "Portfolio", "Contact"])
+page = st.sidebar.radio("Go to:", [ "About Me", "Portfolio", "Contact"])
 
 # Sidebar Profile
-st.sidebar.image("https://i.imgur.com/1ZQZ1Zq.png", width=150)
-st.sidebar.write("**Your Name**")
-st.sidebar.write("Developer • Designer • Creator")
-
-# ---------------------------------------------
-# HOME
-# ---------------------------------------------
-if page == "Home":
-    st.title("👋 Welcome to My Streamlit Portfolio!")
-    st.write("This site is built using **Streamlit**, showcasing various components.")
-
-    st.subheader("✨ Quick Overview")
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Projects", 12)
-    col2.metric("Years Experience", 3)
-    col3.metric("Clients", 24)
-
-    st.progress(70)
-
-    st.subheader("🔥 Featured Video")
-    st.video("https://www.youtube.com/watch?v=VqgUkExPvLY")
-
-    st.subheader("📅 Today's Date")
-    st.write(datetime.now().strftime("%B %d, %Y"))
+st.sidebar.image("https://imgur.com/a/IVEHzVq", width=150)
+st.sidebar.write("Christian Luis C. Fernandez")
+st.sidebar.write("Game Developer • Designer • Prompt Engineer • Data Analyst")
 
 # ---------------------------------------------
 # ABOUT ME
 # ---------------------------------------------
-elif page == "About Me":
+if page == "About Me":
     st.title("👤 About Me")
 
-    st.image("https://i.imgur.com/u8FZKpn.jpeg", width=250)
+    st.image("https://imgur.com/a/IVEHzVq", width=250)
 
     st.header("📘 Autobiography")
+
     with st.expander("Read my story"):
-        st.write("""
-        Hi! I'm **Your Name**, a passionate software developer based in the Philippines.
-        I love building apps, game development, and creating interactive UI experiences.
-        
-        My journey began with simple projects but quickly grew into a career where I 
-        explore web development, AI, and game design.
-        """)
+        st.write(
+            """
+            Hello! I'm **Christian Luis C. Fernandez**, a Computer Science student with strong motivation in 
+            technology, community involvement, event coordination, and collaborative work environments.
+
+            Throughout my academic journey at Cebu Institute of Technology - University, I’ve gained 
+            experience in communication, project coordination, leadership, documentation, and 
+            productivity tools—skills strengthened through active participation in student organizations 
+            such as the CIT-U Honor Society and the Computer Students Society.
+
+            I enjoy learning new technologies, working with people, and contributing to meaningful projects that 
+            help communities and organizations. I am adaptable, dedicated, and always eager to grow both 
+            personally and professionally.
+            """
+        )
+
+    st.subheader("My Analytical Impact")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.caption("Years Experience")
+        st.metric("3+", "+1 year")
+
+    with col2:
+        st.caption("Projects Delivered")
+        st.metric("14", "↑ 99% Success Rate")
+
+    with col3:
+        st.caption("Strong Competency")
+        st.metric("Communication", "↑ Improved engagement")
+
+    st.markdown("---")
+
+    st.subheader("Educational Background")
+
+    st.markdown(
+        """
+        - **B.S. in Computer Science (BSCS)**, Cebu Institute of Technology – University (2023 – Present)  
+        - **Secondary Education**, University of Cebu – Main Campus (2021 – 2023) 
+        - **Primary Education**, Don Vicente Rama Memorial Elementary School (2013 – 2021) 
+        """
+    )
 
     st.subheader("🎯 Skills")
     skills = {
-        "Python": 90,
-        "JavaScript": 70,
-        "C#": 85,
-        "HTML/CSS": 95,
+        "Java": 50,
+        "Python": 50,
+        "Kotlin": 30,
+        "PHP": 25,
+        "HTML/CSS": 55,
         "Game Dev (Godot/Unity)": 80,
     }
 
@@ -73,35 +90,65 @@ elif page == "Portfolio":
 
     tabs = st.tabs(["Projects", "Gallery", "Experience"])
 
+    # -----------------------------------------
     # PROJECTS TAB
+    # -----------------------------------------
     with tabs[0]:
         st.subheader("🚀 Projects")
-        project_data = pd.DataFrame({
-            "Project Name": ["E-commerce App", "Game Prototype", "Portfolio Website", "AI Chatbot"],
-            "Year": ["2024", "2023", "2025", "2025"],
-            "Tech Used": ["Django", "Godot", "Streamlit", "Python"]
-        })
-        st.dataframe(project_data)
 
-        st.write("Download my resume:")
-        resume_text = "This is a sample resume text."
-        st.download_button("📄 Download Resume", resume_text)
+        # PROJECT LIST
+        projects = [
+            {
+                "name": "CookingIna! Ang Sarap!",
+                "images": [
+                    "https://imgur.com/a/qvecSTS",
+                    "https://imgur.com/a/ba29rbA",
+                ],
+                "description": "2D Cooking Simulation Game developed using FXGL. Players can experience cooking various dishes while managing time and resources.",
+            },
+            {
+                "name": "BALIKAW",
+                "images": [
+                    "https://imgur.com/a/qdBnYXo",
+                    "https://imgur.com/a/vCD49Ys",
+                ],
+                "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story.",
+            },
+            {
+                "name": "MatchIt Mania!",
+                "images": [
+                    "https://imgur.com/a/i7dYrPZ",
+                    "https://imgur.com/a/M2fyi54",
+                ],
+                "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
+            }
+        ]
 
-    # GALLERY TAB
-    with tabs[1]:
-        st.subheader("🖼 Gallery")
-        col1, col2 = st.columns(2)
-        col1.image("https://i.imgur.com/Z7AzH2C.png")
-        col2.image("https://i.imgur.com/B85YQeW.jpeg")
+        # DISPLAY PROJECTS
+        for project in projects:
+            with st.expander(f"📌 {project['name']}"):
+                colA, colB = st.columns(2)
 
-    # EXPERIENCE TAB
-    with tabs[2]:
-        st.subheader("💼 Work Experience")
-        st.write("""
-        - **Software Developer** at XYZ Corp (2023–2025)  
-        - **Freelance Web Developer** (2021–Present)  
-        - **Game Developer** (Godot / Unity)
-        """)
+                # Images
+                colA.image(project["images"][0])
+                colB.image(project["images"][1])
+
+                # Description placeholder
+                st.write("### 📝 Description")
+                st.write(project["description"])
+
+        st.markdown("---")
+
+        # Resume Download
+        with open("Fernandez CV.pdf", "rb") as file:
+            resume_data = file.read()
+
+        st.download_button(
+            label="📄 Download My Resume",
+            data=resume_data,
+            file_name="Christian Luis Fernandez - Resume.pdf",
+            mime="application/pdf"
+        )
 
 # ---------------------------------------------
 # CONTACT
@@ -123,6 +170,6 @@ elif page == "Contact":
 
     st.subheader("🌍 Socials")
     col1, col2, col3 = st.columns(3)
-    col1.markdown("[GitHub](https://github.com/)")
-    col2.markdown("[LinkedIn](https://www.linkedin.com/)")
-    col3.markdown("[Facebook](https://facebook.com)")
+    col1.markdown("[GitHub](https://github.com/Fernsz1)")
+    col2.markdown("[LinkedIn](https://www.linkedin.com/in/christian-luis-fernandez-051699383/)")
+    col3.markdown("[Facebook](https://www.facebook.com/christianluis.fernandez/)")
