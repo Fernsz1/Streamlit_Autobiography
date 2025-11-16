@@ -132,6 +132,79 @@ if page == "About Me":
         st.write(f"**{skill}**")
         st.progress(percent)
 
+    st.subheader("💻 Technical Skills & Expertise")
+    st.write(
+        """
+    A comprehensive overview of my technical competencies across programming languages, frameworks, development tools,
+    and foundational computer science concepts. These reflect both academic experience and hands-on project development.
+    """
+    )
+
+    # ---------------------------------
+    # 1. Core Programming Languages
+    # ---------------------------------
+    st.markdown("### 🔹 1. Core Programming Languages")
+
+    langs = {
+        "Python (Intermediate–Advanced)": 75,
+        "Java / Kotlin (Advanced OOP & Mobile)": 85,
+        "C++ (Intermediate Data Structures)": 65,
+        "C (Low-Level Systems Programming)": 60,
+        "JavaScript (Basic Web Development)": 40,
+        "SQL (Database Querying & Optimization)": 70,
+    }
+
+    for l, p in langs.items():
+        st.write(f"**{l}**")
+        st.progress(p)
+
+    # ---------------------------------
+    # 2. Frameworks, Libraries, & Tools
+    # ---------------------------------
+    st.markdown("### 🔹 2. Frameworks, Libraries, & Tools")
+
+    st.write("#### 📱 Mobile & Game Development")
+    st.markdown(
+        """
+    - **Android SDK / Studio**  
+    - **Unity (Basic 2D Development)**  
+    - **JavaFX (Desktop UI Development)**  
+    """
+    )
+
+    st.write("#### 🌐 Data & Web Development")
+    st.markdown(
+        """
+    - **Streamlit (Interactive Web Dashboards)**  
+    - **Pandas / NumPy (Data Manipulation & Analysis)**  
+    - **Matplotlib / Seaborn (Data Visualization)**  
+    """
+    )
+
+    st.write("#### 🔧 Version Control / DevOps")
+    st.markdown(
+        """
+    - **Git / GitHub (Proficient in Branching, PRs, Collaboration)**  
+    - **Docker (Basic Containerization & Environments)**  
+    - **JIRA / Agile (Team Workflow & Task Management)**  
+    """
+    )
+
+    # ---------------------------------
+    # 3. Core Development Concepts
+    # ---------------------------------
+    st.markdown("### 🔹 3. Core Development Concepts")
+
+    st.markdown(
+        """
+    **Object-Oriented Programming (OOP):** Strong command of abstraction, modular design, and clean architecture.  
+    **Data Structures & Algorithms (DSA):** Solid understanding of lists, trees, graphs, hashing, and time complexity.  
+    **Database Management:** Experience with SQL (MySQL) and basic NoSQL concepts (Firebase/MongoDB).  
+    **Debugging & Testing:** Skilled in systematic debugging, error tracing, and writing unit tests for code reliability.  
+    """
+    )
+
+
 # ---------------------------------------------
 # PORTFOLIO
 # ---------------------------------------------
@@ -196,8 +269,9 @@ elif page == "Portfolio":
         st.markdown("---")
 
         st.markdown("### 📄 My Resume")
-        st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
-)
+        st.markdown(
+            "[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
+        )
 
 
 # ---------------------------------------------
