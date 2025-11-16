@@ -218,6 +218,7 @@ elif page == "Portfolio":
     st.subheader("🚀 Projects")
 
     # PROJECT LIST
+    # PROJECT LIST
     projects = [
         {
             "name": "CookingIna! Ang Sarap!",
@@ -225,7 +226,9 @@ elif page == "Portfolio":
                 "https://i.imgur.com/ihpMuPz.jpeg",
                 "https://i.imgur.com/z1JBoZf.jpeg",
             ],
-            "description": "2D Cooking Simulation Game developed using FXGL. Players can experience cooking various dishes while managing time and resources.",
+            "description": "Step into a fast-paced 2D cooking simulation built with the **FXGL (JavaFX Game Engine) library**. "
+                           "Players are challenged to manage time and resources effectively, "
+                           "preparing and serving a variety of dishes against the clock to satisfy customers.",
         },
         {
             "name": "BALIKAW",
@@ -233,15 +236,20 @@ elif page == "Portfolio":
                 "https://i.imgur.com/z2x1jFq.jpeg",
                 "https://i.imgur.com/ntxkaPG.png",
             ],
-            "description": "Indie Cebuano horror game developed in Godot Engine. Players navigate through an old mansion while solving puzzles to uncover the story. Play it here --> https://sahoooo.itch.io/balikaw",
+            "description": "Immerse yourself in an atmospheric indie horror game with a unique Cebuano theme. "
+                           "Developed in the **Godot Engine**, players must navigate a dark, old mansion, "
+                           "solving intricate puzzles and uncovering clues to piece together the haunting narrative. "
+                           "Play it here --> https://sahoooo.itch.io/balikaw",
         },
         {
             "name": "MatchIt Mania!",
             "images": [
-                "https://i.imgur.com/9S6AWNb.jpeg",
-                "https://i.imgur.com/MI84xWb.jpeg",
+                "https://i.imgur.com/LDmL3je.jpeg",
+                "https://i.imgur.com/YTijnY9.jpeg",
             ],
-            "description": "Matching puzzle game where players swap adjacent tiles to create matches of three or more, featuring power-ups and challenging levels."
+            "description": "A vibrant and addictive match-3 puzzle game designed for mobile. "
+                           "Players swap adjacent tiles to create matches, unleashing powerful boosters "
+                           "and tackling increasingly challenging levels that test strategic thinking.",
         },
         {
             "name": "EXPy",
@@ -249,7 +257,9 @@ elif page == "Portfolio":
                 "https://i.imgur.com/Ypk95tg.jpeg",
                 "https://i.imgur.com/f8OarSh.jpeg",
             ],
-            "description": "A python solo learining application that helps users learn Python programming through interactive lessons and quizzes."
+            "description": "A gamified solo learning application to make Python programming accessible and engaging. "
+                           "This app helps users learn via interactive lessons, quizzes, and coding challenges. "
+                           "Key features include an XP system, a competitive leaderboard, and a 'learning streak' tracker to motivate users.",
         },
         {
             "name": "Jubuddy",
@@ -257,7 +267,9 @@ elif page == "Portfolio":
                 "https://i.imgur.com/K7TwAK7.jpeg",
                 "https://i.imgur.com/aWslnFZ.jpeg",
             ],
-            "description": "Smart budget planner app that helps users track expenses, set savings goals, and manage finances effectively."
+            "description": "A smart budget planner app with a unique social twist. "
+                           "While it helps users track expenses and set savings goals, its core feature allows you "
+                           "to invite a 'Buddy' to view each other's progress, providing shared motivation and accountability.",
         }
     ]
 
