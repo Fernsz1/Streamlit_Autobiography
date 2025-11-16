@@ -139,16 +139,10 @@ elif page == "Portfolio":
 
         st.markdown("---")
 
-        # Resume Download
-        with open("Fernandez CV.pdf", "rb") as file:
-            resume_data = file.read()
+        st.markdown("### 📄 My Resume")
+        st.markdown("[Click here to view my CV on Google Docs](https://docs.google.com/document/d/1eac6Cdl-W84E6a_jSmyd88HoeMaatVd1/edit?usp=sharing)"
+)
 
-        st.download_button(
-            label="📄 Download My Resume",
-            data=resume_data,
-            file_name="Christian Luis Fernandez - Resume.pdf",
-            mime="application/pdf"
-        )
 
 # ---------------------------------------------
 # CONTACT
