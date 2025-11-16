@@ -143,11 +143,11 @@ if page == "About Me":
     with tab1:
         st.write("My proficiency in core programming languages, from low-level systems to high-level scripting.")
         langs = {
-            "Python (Intermediate–Advanced)": 75,
+            "Python (Beginner)": 30,
             "Java / Kotlin (Advanced OOP & Mobile)": 85,
             "C++ (Intermediate Data Structures)": 65,
             "C (Low-Level Systems Programming)": 60,
-            "JavaScript (Basic Web Development)": 40,
+            "GDScript (Intermediate Godot Game Development)": 70,
             "SQL (Database Querying & Optimization)": 70,
         }
 
